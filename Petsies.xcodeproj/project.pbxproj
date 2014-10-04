@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A908BCF819E08BAB00FCAA92 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A908BCF619E08BAB00FCAA92 /* Bolts.framework */; };
-		A908BCF919E08BAB00FCAA92 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A908BCF719E08BAB00FCAA92 /* Parse.framework */; };
 		A908BD0419E08BF600FCAA92 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A908BCFA19E08BF600FCAA92 /* AudioToolbox.framework */; };
 		A908BD0519E08BF600FCAA92 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A908BCFB19E08BF600FCAA92 /* CFNetwork.framework */; };
 		A908BD0619E08BF600FCAA92 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A908BCFC19E08BF600FCAA92 /* CoreGraphics.framework */; };
@@ -32,6 +30,8 @@
 		E3FD117D19DFC7A100B022E3 /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E3FD117C19DFC7A100B022E3 /* ProfileViewController.m */; };
 		E3FD117F19E0126900B022E3 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3FD117E19E0126900B022E3 /* MapKit.framework */; };
 		F06BBF0719E08F110035647A /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F06BBF0619E08F110035647A /* LoginViewController.m */; };
+		F06BBF0A19E0955C0035647A /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F06BBF0819E0955C0035647A /* Bolts.framework */; };
+		F06BBF0B19E0955C0035647A /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F06BBF0919E0955C0035647A /* Parse.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,8 +45,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		A908BCF619E08BAB00FCAA92 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Bolts.framework; path = "../Downloads/parse-library-1.4.1/Bolts.framework"; sourceTree = "<group>"; };
-		A908BCF719E08BAB00FCAA92 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Parse.framework; path = "../Downloads/parse-library-1.4.1/Parse.framework"; sourceTree = "<group>"; };
 		A908BCFA19E08BF600FCAA92 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		A908BCFB19E08BF600FCAA92 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		A908BCFC19E08BF600FCAA92 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -82,6 +80,8 @@
 		E3FD117E19E0126900B022E3 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		F06BBF0519E08F110035647A /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		F06BBF0619E08F110035647A /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		F06BBF0819E0955C0035647A /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Bolts.framework; path = "../Downloads/parse-library-1.4.1 2/Bolts.framework"; sourceTree = "<group>"; };
+		F06BBF0919E0955C0035647A /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Parse.framework; path = "../Downloads/parse-library-1.4.1 2/Parse.framework"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,16 +92,16 @@
 				A908BD0419E08BF600FCAA92 /* AudioToolbox.framework in Frameworks */,
 				A908BD0519E08BF600FCAA92 /* CFNetwork.framework in Frameworks */,
 				A908BD0619E08BF600FCAA92 /* CoreGraphics.framework in Frameworks */,
+				F06BBF0A19E0955C0035647A /* Bolts.framework in Frameworks */,
 				A908BD0719E08BF600FCAA92 /* CoreLocation.framework in Frameworks */,
 				A908BD0819E08BF600FCAA92 /* libz.dylib in Frameworks */,
+				F06BBF0B19E0955C0035647A /* Parse.framework in Frameworks */,
 				A908BD0919E08BF600FCAA92 /* MobileCoreServices.framework in Frameworks */,
 				A908BD0A19E08BF600FCAA92 /* QuartzCore.framework in Frameworks */,
 				A908BD0B19E08BF600FCAA92 /* Security.framework in Frameworks */,
 				A908BD0C19E08BF600FCAA92 /* StoreKit.framework in Frameworks */,
 				A908BD0D19E08BF600FCAA92 /* SystemConfiguration.framework in Frameworks */,
 				E3FD117F19E0126900B022E3 /* MapKit.framework in Frameworks */,
-				A908BCF919E08BAB00FCAA92 /* Parse.framework in Frameworks */,
-				A908BCF819E08BAB00FCAA92 /* Bolts.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -197,6 +197,8 @@
 		E3FD118019E0133600B022E3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F06BBF0819E0955C0035647A /* Bolts.framework */,
+				F06BBF0919E0955C0035647A /* Parse.framework */,
 				A908BCFA19E08BF600FCAA92 /* AudioToolbox.framework */,
 				A908BCFB19E08BF600FCAA92 /* CFNetwork.framework */,
 				A908BCFC19E08BF600FCAA92 /* CoreGraphics.framework */,
@@ -207,8 +209,6 @@
 				A908BD0119E08BF600FCAA92 /* Security.framework */,
 				A908BD0219E08BF600FCAA92 /* StoreKit.framework */,
 				A908BD0319E08BF600FCAA92 /* SystemConfiguration.framework */,
-				A908BCF619E08BAB00FCAA92 /* Bolts.framework */,
-				A908BCF719E08BAB00FCAA92 /* Parse.framework */,
 				E3FD117E19E0126900B022E3 /* MapKit.framework */,
 			);
 			name = Frameworks;
@@ -447,6 +447,8 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"/Users/dongjoonkim/Downloads/parse-library-1.4.1",
+					"/Users/jenniferjo/Downloads/parse-library-1.4.1",
+					2,
 				);
 				INFOPLIST_FILE = Petsies/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -461,6 +463,8 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"/Users/dongjoonkim/Downloads/parse-library-1.4.1",
+					"/Users/jenniferjo/Downloads/parse-library-1.4.1",
+					2,
 				);
 				INFOPLIST_FILE = Petsies/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
