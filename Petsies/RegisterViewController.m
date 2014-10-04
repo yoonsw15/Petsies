@@ -12,11 +12,30 @@
 
 @end
 
+UIGestureRecognizer *tapper;
+
 @implementation RegisterViewController
+
+- (void)handleSingleTap:(UITapGestureRecognizer *) sender
+{
+    [self.view endEditing:YES];
+}
+
+- (void) sourceSelected:(UIButton*) sender {
+    
+    
+    // cancel request for extended meny
+    [NSObject cancelPreviousPerformRequestsWithTarget:self selector:@selector(sourceSelectedExtended:) object:sender];
+}
+
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    tapper = [[UITapGestureRecognizer alloc]
+              initWithTarget:self action:@selector(handleSingleTap:)];
+    tapper.cancelsTouchesInView = NO;
+    [self.view addGestureRecognizer:tapper];
 }
 
 - (void)didReceiveMemoryWarning {
