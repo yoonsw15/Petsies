@@ -6,6 +6,7 @@
 //  Copyright (c) 2014년 BruinCS. All rights reserved.
 //
 
+#import <Parse/Parse.h>
 #import "AppDelegate.h"
 
 @interface AppDelegate ()
@@ -17,6 +18,8 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    [Parse setApplicationId:@"8fjslPvIoxsSrKQFiDvcbU0y6hZZB9r1Sx5baL53"
+                  clientKey:@"JoON0YVOjiI9TBI1mEkpFZgFY6mgrbqmOaCRarK9"];
     return YES;
 }
 
