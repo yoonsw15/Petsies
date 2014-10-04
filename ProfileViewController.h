@@ -8,8 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ProfileViewController : UIViewController<UINavigationControllerDelegate,UIImagePickerControllerDelegate>
+@interface ProfileViewController : UIViewController<UINavigationControllerDelegate,UIImagePickerControllerDelegate,UITableViewDataSource,UITableViewDelegate>
 @property (strong, nonatomic) IBOutlet UIImageView *profilePic;
 @property (strong, nonatomic) IBOutlet UIButton *addPhoto;
-
+@property (strong, nonatomic) IBOutlet UITableView *petList;
 @end
