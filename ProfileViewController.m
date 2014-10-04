@@ -24,6 +24,26 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)addPicture:(id)sender
+{
+    UIImagePickerController *picker = [[UIImagePickerController alloc] init];
+    picker.delegate = self;
+    
+    [picker setSourceType:UIImagePickerControllerSourceTypePhotoLibrary];
+    [picker setAllowsEditing:YES];
+    
+    [self presentViewController:picker animated:YES completion:nil];
+    
+    
+}
+
+- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
+{
+    UIImage *pickedImage = [info objectForKey:UIImagePickerControllerOriginalImage];
+    self.profilePic.image = pickedImage;
+    self.addPhoto.titleLabel.text = @"";
+}
+
 /*
 #pragma mark - Navigation
 
