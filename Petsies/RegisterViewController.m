@@ -21,7 +21,6 @@ UIGestureRecognizer *tapper;
     [self.view endEditing:YES];
 }
 
-
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
@@ -48,11 +47,16 @@ UIGestureRecognizer *tapper;
 */
 
 
-/*
- NSUserDefaults *ud = [NSUserDefaults standardUserDefaults];
- [ud setObject:pickedImage forKey:@"profilePic"];
- [ud synchronize];
- */
+- (IBAction)nextButton:(id)sender {
+    NSUserDefaults *ud = [NSUserDefaults standardUserDefaults];
+    
+    [ud setObject:self.email.text forKey:@"email"];
+    [ud setObject:self.password.text forKey:@"password"];
+    [ud setObject:self.name.text forKey:@"name"];
+    [ud setObject:self.creditCard.text forKey:@"creditCard"];
+    [ud setObject:self.cvv.text forKey:@"cvv"];
+    [ud setObject:self.zipCode.text forKey:@"zipCode"];
 
-
+    [ud synchronize];
+}
 @end

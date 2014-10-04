@@ -177,6 +177,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
+                                    <action selector="nextButton:" destination="daU-L5-drG" eventType="touchUpInside" id="rXY-FG-2VT"/>
                                     <segue destination="z4c-MQ-sX5" kind="presentation" modalTransitionStyle="crossDissolve" id="SUe-I9-aYT"/>
                                 </connections>
                             </button>
@@ -273,7 +274,6 @@
                         <outlet property="cvv" destination="1n1-fD-j4k" id="Tc3-fz-HoZ"/>
                         <outlet property="email" destination="JrK-C1-JEe" id="nR0-8a-Flj"/>
                         <outlet property="name" destination="5yj-Le-550" id="kb6-Sy-ofb"/>
-                        <outlet property="nextButton" destination="z6s-gw-jiE" id="yV5-mQ-VlN"/>
                         <outlet property="password" destination="Gs9-cP-YqT" id="Dnh-gR-vtu"/>
                         <outlet property="zipCode" destination="9uV-LX-gaa" id="W7n-tS-WyF"/>
                     </connections>
