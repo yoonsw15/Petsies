@@ -12,11 +12,24 @@
 
 @end
 
+UIGestureRecognizer *tapper;
+
 @implementation RegisterViewController
+
+- (void)handleSingleTap:(UITapGestureRecognizer *) sender
+{
+    [self.view endEditing:YES];
+}
+
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    tapper = [[UITapGestureRecognizer alloc]
+              initWithTarget:self action:@selector(handleSingleTap:)];
+    tapper.cancelsTouchesInView = NO;
+    [self.view addGestureRecognizer:tapper];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -33,5 +46,13 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+
+/*
+ NSUserDefaults *ud = [NSUserDefaults standardUserDefaults];
+ [ud setObject:pickedImage forKey:@"profilePic"];
+ [ud synchronize];
+ */
+
 
 @end
