@@ -33,15 +33,17 @@
     [picker setAllowsEditing:YES];
     
     [self presentViewController:picker animated:YES completion:nil];
-    
-    
 }
 
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
 {
     UIImage *pickedImage = [info objectForKey:UIImagePickerControllerOriginalImage];
+    self.profilePic.contentMode = UIViewContentModeScaleAspectFit;
+    
     self.profilePic.image = pickedImage;
     self.addPhoto.titleLabel.text = @"";
+    
+    [picker dismissViewControllerAnimated:YES completion:nil];
 }
 
 /*
