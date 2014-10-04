@@ -10,12 +10,17 @@
 
 @interface ProfileViewController ()
 
+@property NSMutableArray *petDataList;
+
 @end
 
 @implementation ProfileViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    self.petList.delegate = self;
+    self.petDataList = [[NSMutableArray alloc] initWithCapacity:9];
     // Do any additional setup after loading the view.
 }
 
@@ -45,6 +50,36 @@
     
     [picker dismissViewControllerAnimated:YES completion:nil];
 }
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    static NSString *simpleTableIdentifier = @"Cell";
+    
+    UITableViewCell *cell = [self.petList  dequeueReusableCellWithIdentifier:simpleTableIdentifier];
+    
+    if (cell == nil) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:simpleTableIdentifier];
+    }
+    
+    cell.textLabel.text = [self.petDataList objectAtIndex:indexPath.row];
+    return cell;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return [self.petDataList count];
+}
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+    return 1;
+}
+
+- (IBAction)addAPet:(id)sender {
+    [self.petDataList addObject:@"CoCo"];
+    [self.petList reloadData];
+}
+
 
 /*
 #pragma mark - Navigation
