@@ -21,17 +21,11 @@ UIGestureRecognizer *tapper;
     [self.view endEditing:YES];
 }
 
-- (void) sourceSelected:(UIButton*) sender {
-    
-    
-    // cancel request for extended meny
-    [NSObject cancelPreviousPerformRequestsWithTarget:self selector:@selector(sourceSelectedExtended:) object:sender];
-}
-
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
     tapper = [[UITapGestureRecognizer alloc]
               initWithTarget:self action:@selector(handleSingleTap:)];
     tapper.cancelsTouchesInView = NO;
@@ -52,5 +46,13 @@ UIGestureRecognizer *tapper;
     // Pass the selected object to the new view controller.
 }
 */
+
+
+/*
+ NSUserDefaults *ud = [NSUserDefaults standardUserDefaults];
+ [ud setObject:pickedImage forKey:@"profilePic"];
+ [ud synchronize];
+ */
+
 
 @end
