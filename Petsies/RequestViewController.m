@@ -24,4 +24,15 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)queryForSitters:(id)sender {
+    //YOOJUNG TODO: search the backend and get the results.
+    
+    NSLog(@"Search the backend for sitters");
+    
+    NSDate *startDate = self.startPicker.date;
+    NSDate *endDate = self.endPicker.date;
+    
+    
+}
+
 @end

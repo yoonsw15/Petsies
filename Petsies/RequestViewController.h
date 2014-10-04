@@ -9,7 +9,8 @@
 #import <UIKit/UIKit.h>
 
 @interface RequestViewController : UIViewController
-
+@property (strong, nonatomic) IBOutlet UIDatePicker *startPicker;
+@property (strong, nonatomic) IBOutlet UIDatePicker *endPicker;
 
 @end
 
