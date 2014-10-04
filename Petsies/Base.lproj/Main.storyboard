@@ -84,10 +84,10 @@
             </objects>
             <point key="canvasLocation" x="1562" y="360"/>
         </scene>
-        <!--Login View Controller-->
+        <!--Home View Controller-->
         <scene sceneID="UwK-88-bIT">
             <objects>
-                <viewController id="w0u-X9-7WO" customClass="LoginViewController" sceneMemberID="viewController">
+                <viewController id="w0u-X9-7WO" customClass="HomeViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Ffe-Qs-Bii"/>
                         <viewControllerLayoutGuide type="bottom" id="ZH8-35-xWA"/>

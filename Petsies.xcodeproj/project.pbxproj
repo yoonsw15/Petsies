@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A908BCF819E08BAB00FCAA92 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A908BCF619E08BAB00FCAA92 /* Bolts.framework */; };
-		A908BCF919E08BAB00FCAA92 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A908BCF719E08BAB00FCAA92 /* Parse.framework */; };
 		A908BD0419E08BF600FCAA92 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A908BCFA19E08BF600FCAA92 /* AudioToolbox.framework */; };
 		A908BD0519E08BF600FCAA92 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A908BCFB19E08BF600FCAA92 /* CFNetwork.framework */; };
 		A908BD0619E08BF600FCAA92 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A908BCFC19E08BF600FCAA92 /* CoreGraphics.framework */; };
@@ -27,10 +25,13 @@
 		E3FD115219DFA99A00B022E3 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E3FD115119DFA99A00B022E3 /* Images.xcassets */; };
 		E3FD115519DFA99A00B022E3 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = E3FD115319DFA99A00B022E3 /* LaunchScreen.xib */; };
 		E3FD116119DFA99A00B022E3 /* PetsiesTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E3FD116019DFA99A00B022E3 /* PetsiesTests.m */; };
-		E3FD117119DFC0C400B022E3 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E3FD117019DFC0C400B022E3 /* LoginViewController.m */; };
+		E3FD117119DFC0C400B022E3 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E3FD117019DFC0C400B022E3 /* HomeViewController.m */; };
 		E3FD117719DFC2DC00B022E3 /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E3FD117619DFC2DC00B022E3 /* RegisterViewController.m */; };
 		E3FD117D19DFC7A100B022E3 /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E3FD117C19DFC7A100B022E3 /* ProfileViewController.m */; };
 		E3FD117F19E0126900B022E3 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3FD117E19E0126900B022E3 /* MapKit.framework */; };
+		F06BBF0719E08F110035647A /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F06BBF0619E08F110035647A /* LoginViewController.m */; };
+		F06BBF0A19E0955C0035647A /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F06BBF0819E0955C0035647A /* Bolts.framework */; };
+		F06BBF0B19E0955C0035647A /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F06BBF0919E0955C0035647A /* Parse.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,8 +45,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		A908BCF619E08BAB00FCAA92 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Bolts.framework; path = "../Downloads/parse-library-1.4.1/Bolts.framework"; sourceTree = "<group>"; };
-		A908BCF719E08BAB00FCAA92 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Parse.framework; path = "../Downloads/parse-library-1.4.1/Parse.framework"; sourceTree = "<group>"; };
 		A908BCFA19E08BF600FCAA92 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		A908BCFB19E08BF600FCAA92 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		A908BCFC19E08BF600FCAA92 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -70,8 +69,8 @@
 		E3FD115A19DFA99A00B022E3 /* PetsiesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PetsiesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E3FD115F19DFA99A00B022E3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E3FD116019DFA99A00B022E3 /* PetsiesTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PetsiesTests.m; sourceTree = "<group>"; };
-		E3FD116F19DFC0C400B022E3 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoginViewController.h; path = Petsies/LoginViewController.h; sourceTree = "<group>"; };
-		E3FD117019DFC0C400B022E3 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoginViewController.m; path = Petsies/LoginViewController.m; sourceTree = "<group>"; };
+		E3FD116F19DFC0C400B022E3 /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HomeViewController.h; path = Petsies/HomeViewController.h; sourceTree = "<group>"; };
+		E3FD117019DFC0C400B022E3 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HomeViewController.m; path = Petsies/HomeViewController.m; sourceTree = "<group>"; };
 		E3FD117519DFC2DC00B022E3 /* RegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RegisterViewController.h; path = Petsies/RegisterViewController.h; sourceTree = "<group>"; };
 		E3FD117619DFC2DC00B022E3 /* RegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RegisterViewController.m; path = Petsies/RegisterViewController.m; sourceTree = "<group>"; };
 		E3FD117919DFC58300B022E3 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -79,6 +78,10 @@
 		E3FD117B19DFC7A100B022E3 /* ProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileViewController.h; sourceTree = "<group>"; };
 		E3FD117C19DFC7A100B022E3 /* ProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileViewController.m; sourceTree = "<group>"; };
 		E3FD117E19E0126900B022E3 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		F06BBF0519E08F110035647A /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		F06BBF0619E08F110035647A /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		F06BBF0819E0955C0035647A /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Bolts.framework; path = "../Downloads/parse-library-1.4.1 2/Bolts.framework"; sourceTree = "<group>"; };
+		F06BBF0919E0955C0035647A /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Parse.framework; path = "../Downloads/parse-library-1.4.1 2/Parse.framework"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,16 +92,16 @@
 				A908BD0419E08BF600FCAA92 /* AudioToolbox.framework in Frameworks */,
 				A908BD0519E08BF600FCAA92 /* CFNetwork.framework in Frameworks */,
 				A908BD0619E08BF600FCAA92 /* CoreGraphics.framework in Frameworks */,
+				F06BBF0A19E0955C0035647A /* Bolts.framework in Frameworks */,
 				A908BD0719E08BF600FCAA92 /* CoreLocation.framework in Frameworks */,
 				A908BD0819E08BF600FCAA92 /* libz.dylib in Frameworks */,
+				F06BBF0B19E0955C0035647A /* Parse.framework in Frameworks */,
 				A908BD0919E08BF600FCAA92 /* MobileCoreServices.framework in Frameworks */,
 				A908BD0A19E08BF600FCAA92 /* QuartzCore.framework in Frameworks */,
 				A908BD0B19E08BF600FCAA92 /* Security.framework in Frameworks */,
 				A908BD0C19E08BF600FCAA92 /* StoreKit.framework in Frameworks */,
 				A908BD0D19E08BF600FCAA92 /* SystemConfiguration.framework in Frameworks */,
 				E3FD117F19E0126900B022E3 /* MapKit.framework in Frameworks */,
-				A908BCF919E08BAB00FCAA92 /* Parse.framework in Frameworks */,
-				A908BCF819E08BAB00FCAA92 /* Bolts.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -178,12 +181,14 @@
 		E3FD117819DFC2E100B022E3 /* Onboarding */ = {
 			isa = PBXGroup;
 			children = (
-				E3FD116F19DFC0C400B022E3 /* LoginViewController.h */,
-				E3FD117019DFC0C400B022E3 /* LoginViewController.m */,
+				E3FD116F19DFC0C400B022E3 /* HomeViewController.h */,
+				E3FD117019DFC0C400B022E3 /* HomeViewController.m */,
 				E3FD117519DFC2DC00B022E3 /* RegisterViewController.h */,
 				E3FD117619DFC2DC00B022E3 /* RegisterViewController.m */,
 				E3FD117B19DFC7A100B022E3 /* ProfileViewController.h */,
 				E3FD117C19DFC7A100B022E3 /* ProfileViewController.m */,
+				F06BBF0519E08F110035647A /* LoginViewController.h */,
+				F06BBF0619E08F110035647A /* LoginViewController.m */,
 			);
 			name = Onboarding;
 			path = ..;
@@ -192,6 +197,8 @@
 		E3FD118019E0133600B022E3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F06BBF0819E0955C0035647A /* Bolts.framework */,
+				F06BBF0919E0955C0035647A /* Parse.framework */,
 				A908BCFA19E08BF600FCAA92 /* AudioToolbox.framework */,
 				A908BCFB19E08BF600FCAA92 /* CFNetwork.framework */,
 				A908BCFC19E08BF600FCAA92 /* CoreGraphics.framework */,
@@ -202,8 +209,6 @@
 				A908BD0119E08BF600FCAA92 /* Security.framework */,
 				A908BD0219E08BF600FCAA92 /* StoreKit.framework */,
 				A908BD0319E08BF600FCAA92 /* SystemConfiguration.framework */,
-				A908BCF619E08BAB00FCAA92 /* Bolts.framework */,
-				A908BCF719E08BAB00FCAA92 /* Parse.framework */,
 				E3FD117E19E0126900B022E3 /* MapKit.framework */,
 			);
 			name = Frameworks;
@@ -309,13 +314,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F06BBF0719E08F110035647A /* LoginViewController.m in Sources */,
 				E3FD114D19DFA99A00B022E3 /* SecondViewController.m in Sources */,
 				E3FD114719DFA99A00B022E3 /* AppDelegate.m in Sources */,
 				E3FD117D19DFC7A100B022E3 /* ProfileViewController.m in Sources */,
 				E3FD114A19DFA99A00B022E3 /* FirstViewController.m in Sources */,
 				E3FD117719DFC2DC00B022E3 /* RegisterViewController.m in Sources */,
 				E3FD114419DFA99A00B022E3 /* main.m in Sources */,
-				E3FD117119DFC0C400B022E3 /* LoginViewController.m in Sources */,
+				E3FD117119DFC0C400B022E3 /* HomeViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -441,6 +447,8 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"/Users/dongjoonkim/Downloads/parse-library-1.4.1",
+					"/Users/jenniferjo/Downloads/parse-library-1.4.1",
+					2,
 				);
 				INFOPLIST_FILE = Petsies/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -455,6 +463,8 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"/Users/dongjoonkim/Downloads/parse-library-1.4.1",
+					"/Users/jenniferjo/Downloads/parse-library-1.4.1",
+					2,
 				);
 				INFOPLIST_FILE = Petsies/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

@@ -6,13 +6,13 @@
 //  Copyright (c) 2014년 BruinCS. All rights reserved.
 //
 
-#import "LoginViewController.h"
+#import "HomeViewController.h"
 
-@interface LoginViewController ()
+@interface HomeViewController ()
 
 @end
 
-@implementation LoginViewController
+@implementation HomeViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
