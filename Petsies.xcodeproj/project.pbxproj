@@ -15,6 +15,10 @@
 		E3FD115219DFA99A00B022E3 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E3FD115119DFA99A00B022E3 /* Images.xcassets */; };
 		E3FD115519DFA99A00B022E3 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = E3FD115319DFA99A00B022E3 /* LaunchScreen.xib */; };
 		E3FD116119DFA99A00B022E3 /* PetsiesTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E3FD116019DFA99A00B022E3 /* PetsiesTests.m */; };
+		E3FD117119DFC0C400B022E3 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E3FD117019DFC0C400B022E3 /* LoginViewController.m */; };
+		E3FD117719DFC2DC00B022E3 /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E3FD117619DFC2DC00B022E3 /* RegisterViewController.m */; };
+		E3FD117D19DFC7A100B022E3 /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E3FD117C19DFC7A100B022E3 /* ProfileViewController.m */; };
+		E3FD117F19E0126900B022E3 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3FD117E19E0126900B022E3 /* MapKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,12 +41,20 @@
 		E3FD114919DFA99A00B022E3 /* FirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
 		E3FD114B19DFA99A00B022E3 /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
 		E3FD114C19DFA99A00B022E3 /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
-		E3FD114F19DFA99A00B022E3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E3FD115119DFA99A00B022E3 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		E3FD115419DFA99A00B022E3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		E3FD115A19DFA99A00B022E3 /* PetsiesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PetsiesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E3FD115F19DFA99A00B022E3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E3FD116019DFA99A00B022E3 /* PetsiesTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PetsiesTests.m; sourceTree = "<group>"; };
+		E3FD116F19DFC0C400B022E3 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoginViewController.h; path = Petsies/LoginViewController.h; sourceTree = "<group>"; };
+		E3FD117019DFC0C400B022E3 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoginViewController.m; path = Petsies/LoginViewController.m; sourceTree = "<group>"; };
+		E3FD117519DFC2DC00B022E3 /* RegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RegisterViewController.h; path = Petsies/RegisterViewController.h; sourceTree = "<group>"; };
+		E3FD117619DFC2DC00B022E3 /* RegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RegisterViewController.m; path = Petsies/RegisterViewController.m; sourceTree = "<group>"; };
+		E3FD117919DFC58300B022E3 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/Main.storyboard; sourceTree = "<group>"; };
+		E3FD117A19DFC58A00B022E3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		E3FD117B19DFC7A100B022E3 /* ProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileViewController.h; sourceTree = "<group>"; };
+		E3FD117C19DFC7A100B022E3 /* ProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileViewController.m; sourceTree = "<group>"; };
+		E3FD117E19E0126900B022E3 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,6 +62,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E3FD117F19E0126900B022E3 /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -69,6 +82,7 @@
 				E3FD114019DFA99A00B022E3 /* Petsies */,
 				E3FD115D19DFA99A00B022E3 /* PetsiesTests */,
 				E3FD113F19DFA99A00B022E3 /* Products */,
+				E3FD118019E0133600B022E3 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -84,13 +98,14 @@
 		E3FD114019DFA99A00B022E3 /* Petsies */ = {
 			isa = PBXGroup;
 			children = (
+				E3FD114E19DFA99A00B022E3 /* Main.storyboard */,
 				E3FD114519DFA99A00B022E3 /* AppDelegate.h */,
 				E3FD114619DFA99A00B022E3 /* AppDelegate.m */,
+				E3FD117819DFC2E100B022E3 /* Onboarding */,
 				E3FD114819DFA99A00B022E3 /* FirstViewController.h */,
 				E3FD114919DFA99A00B022E3 /* FirstViewController.m */,
 				E3FD114B19DFA99A00B022E3 /* SecondViewController.h */,
 				E3FD114C19DFA99A00B022E3 /* SecondViewController.m */,
-				E3FD114E19DFA99A00B022E3 /* Main.storyboard */,
 				E3FD115119DFA99A00B022E3 /* Images.xcassets */,
 				E3FD115319DFA99A00B022E3 /* LaunchScreen.xib */,
 				E3FD114119DFA99A00B022E3 /* Supporting Files */,
@@ -122,6 +137,28 @@
 				E3FD115F19DFA99A00B022E3 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E3FD117819DFC2E100B022E3 /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				E3FD116F19DFC0C400B022E3 /* LoginViewController.h */,
+				E3FD117019DFC0C400B022E3 /* LoginViewController.m */,
+				E3FD117519DFC2DC00B022E3 /* RegisterViewController.h */,
+				E3FD117619DFC2DC00B022E3 /* RegisterViewController.m */,
+				E3FD117B19DFC7A100B022E3 /* ProfileViewController.h */,
+				E3FD117C19DFC7A100B022E3 /* ProfileViewController.m */,
+			);
+			name = Onboarding;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		E3FD118019E0133600B022E3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E3FD117E19E0126900B022E3 /* MapKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -226,8 +263,11 @@
 			files = (
 				E3FD114D19DFA99A00B022E3 /* SecondViewController.m in Sources */,
 				E3FD114719DFA99A00B022E3 /* AppDelegate.m in Sources */,
+				E3FD117D19DFC7A100B022E3 /* ProfileViewController.m in Sources */,
 				E3FD114A19DFA99A00B022E3 /* FirstViewController.m in Sources */,
+				E3FD117719DFC2DC00B022E3 /* RegisterViewController.m in Sources */,
 				E3FD114419DFA99A00B022E3 /* main.m in Sources */,
+				E3FD117119DFC0C400B022E3 /* LoginViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -253,7 +293,8 @@
 		E3FD114E19DFA99A00B022E3 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				E3FD114F19DFA99A00B022E3 /* Base */,
+				E3FD117919DFC58300B022E3 /* en */,
+				E3FD117A19DFC58A00B022E3 /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -418,6 +459,7 @@
 				E3FD116619DFA99A00B022E3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E3FD116719DFA99A00B022E3 /* Build configuration list for PBXNativeTarget "PetsiesTests" */ = {
 			isa = XCConfigurationList;
@@ -426,6 +468,7 @@
 				E3FD116919DFA99A00B022E3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
