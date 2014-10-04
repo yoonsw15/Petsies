@@ -8,7 +8,7 @@
 
 #import "ProfileViewController.h"
 
-@interface ProfileViewController ()
+@interface ProfileViewController () <UIAlertViewDelegate>
 
 @property NSMutableArray *petDataList;
 
@@ -75,10 +75,32 @@
     return 1;
 }
 
-- (IBAction)addAPet:(id)sender {
-    [self.petDataList addObject:@"CoCo"];
-    [self.petList reloadData];
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (editingStyle == UITableViewCellEditingStyleDelete) {
+        [self.petDataList removeObjectAtIndex:indexPath.row];
+        [self.petList deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
+    } else {
+        NSLog(@"Unhandled editing style! %ld", editingStyle);
+    }
 }
+
+- (IBAction)addAPet:(id)sender {
+    UIAlertView * alert = [[UIAlertView alloc] initWithTitle:@"Name of your pet" message:@"" delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:@"OK", nil];
+    alert.alertViewStyle = UIAlertViewStylePlainTextInput;
+    UITextField * alertTextField = [alert textFieldAtIndex:0];
+    alertTextField.placeholder = @"Enter your pet's name";
+    [alert show];
+}
+
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
+    if (buttonIndex == 1) {
+        NSString *name = [alertView textFieldAtIndex:0].text;
+    [self.petDataList addObject:name];
+    [self.petList reloadData];
+    }
+}
+
+
 
 
 /*
