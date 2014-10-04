@@ -19,10 +19,11 @@
 		A908BD0D19E08BF600FCAA92 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A908BD0319E08BF600FCAA92 /* SystemConfiguration.framework */; };
 		E3B928BF19E09BC400A304F0 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3B928BD19E09BC400A304F0 /* Bolts.framework */; };
 		E3B928C019E09BC400A304F0 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3B928BE19E09BC400A304F0 /* Parse.framework */; };
+		E3B928C319E0A94000A304F0 /* SitterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E3B928C219E0A94000A304F0 /* SitterViewController.m */; };
 		E3FD114419DFA99A00B022E3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E3FD114319DFA99A00B022E3 /* main.m */; };
 		E3FD114719DFA99A00B022E3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E3FD114619DFA99A00B022E3 /* AppDelegate.m */; };
-		E3FD114A19DFA99A00B022E3 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E3FD114919DFA99A00B022E3 /* FirstViewController.m */; };
-		E3FD114D19DFA99A00B022E3 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E3FD114C19DFA99A00B022E3 /* SecondViewController.m */; };
+		E3FD114A19DFA99A00B022E3 /* RequestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E3FD114919DFA99A00B022E3 /* RequestViewController.m */; };
+		E3FD114D19DFA99A00B022E3 /* UpcomingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E3FD114C19DFA99A00B022E3 /* UpcomingViewController.m */; };
 		E3FD115019DFA99A00B022E3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E3FD114E19DFA99A00B022E3 /* Main.storyboard */; };
 		E3FD115219DFA99A00B022E3 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E3FD115119DFA99A00B022E3 /* Images.xcassets */; };
 		E3FD115519DFA99A00B022E3 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = E3FD115319DFA99A00B022E3 /* LaunchScreen.xib */; };
@@ -57,15 +58,17 @@
 		A908BD0319E08BF600FCAA92 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		E3B928BD19E09BC400A304F0 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Bolts.framework; path = ../../Library/Frameworks/Bolts.framework; sourceTree = "<group>"; };
 		E3B928BE19E09BC400A304F0 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Parse.framework; path = ../../Library/Frameworks/Parse.framework; sourceTree = "<group>"; };
+		E3B928C119E0A94000A304F0 /* SitterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SitterViewController.h; sourceTree = "<group>"; };
+		E3B928C219E0A94000A304F0 /* SitterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SitterViewController.m; sourceTree = "<group>"; };
 		E3FD113E19DFA99A00B022E3 /* Petsies.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Petsies.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E3FD114219DFA99A00B022E3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E3FD114319DFA99A00B022E3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		E3FD114519DFA99A00B022E3 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		E3FD114619DFA99A00B022E3 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		E3FD114819DFA99A00B022E3 /* FirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
-		E3FD114919DFA99A00B022E3 /* FirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
-		E3FD114B19DFA99A00B022E3 /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
-		E3FD114C19DFA99A00B022E3 /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
+		E3FD114819DFA99A00B022E3 /* RequestViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RequestViewController.h; sourceTree = "<group>"; };
+		E3FD114919DFA99A00B022E3 /* RequestViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RequestViewController.m; sourceTree = "<group>"; };
+		E3FD114B19DFA99A00B022E3 /* UpcomingViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UpcomingViewController.h; sourceTree = "<group>"; };
+		E3FD114C19DFA99A00B022E3 /* UpcomingViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UpcomingViewController.m; sourceTree = "<group>"; };
 		E3FD115119DFA99A00B022E3 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		E3FD115419DFA99A00B022E3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		E3FD115A19DFA99A00B022E3 /* PetsiesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PetsiesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -141,10 +144,12 @@
 				E3FD114519DFA99A00B022E3 /* AppDelegate.h */,
 				E3FD114619DFA99A00B022E3 /* AppDelegate.m */,
 				E3FD117819DFC2E100B022E3 /* Onboarding */,
-				E3FD114819DFA99A00B022E3 /* FirstViewController.h */,
-				E3FD114919DFA99A00B022E3 /* FirstViewController.m */,
-				E3FD114B19DFA99A00B022E3 /* SecondViewController.h */,
-				E3FD114C19DFA99A00B022E3 /* SecondViewController.m */,
+				E3FD114819DFA99A00B022E3 /* RequestViewController.h */,
+				E3FD114919DFA99A00B022E3 /* RequestViewController.m */,
+				E3FD114B19DFA99A00B022E3 /* UpcomingViewController.h */,
+				E3FD114C19DFA99A00B022E3 /* UpcomingViewController.m */,
+				E3B928C119E0A94000A304F0 /* SitterViewController.h */,
+				E3B928C219E0A94000A304F0 /* SitterViewController.m */,
 				E3FD115119DFA99A00B022E3 /* Images.xcassets */,
 				E3FD115319DFA99A00B022E3 /* LaunchScreen.xib */,
 				E3FD114119DFA99A00B022E3 /* Supporting Files */,
@@ -315,10 +320,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				F06BBF0719E08F110035647A /* LoginViewController.m in Sources */,
-				E3FD114D19DFA99A00B022E3 /* SecondViewController.m in Sources */,
+				E3FD114D19DFA99A00B022E3 /* UpcomingViewController.m in Sources */,
 				E3FD114719DFA99A00B022E3 /* AppDelegate.m in Sources */,
 				E3FD117D19DFC7A100B022E3 /* ProfileViewController.m in Sources */,
-				E3FD114A19DFA99A00B022E3 /* FirstViewController.m in Sources */,
+				E3B928C319E0A94000A304F0 /* SitterViewController.m in Sources */,
+				E3FD114A19DFA99A00B022E3 /* RequestViewController.m in Sources */,
 				E3FD117719DFC2DC00B022E3 /* RegisterViewController.m in Sources */,
 				E3FD114419DFA99A00B022E3 /* main.m in Sources */,
 				E3FD117119DFC0C400B022E3 /* HomeViewController.m in Sources */,
@@ -448,7 +454,7 @@
 					"$(inherited)",
 					"/Users/dongjoonkim/Downloads/parse-library-1.4.1",
 					"/Users/seungwon/Downloads/parse-library-1.4.1",
-                    "/Users/jenniferjo/Downloads/parse-library-1.4.1",
+					"/Users/jenniferjo/Downloads/parse-library-1.4.1",
 					"$(USER_LIBRARY_DIR)/Frameworks",
 				);
 				INFOPLIST_FILE = Petsies/Info.plist;
@@ -465,7 +471,7 @@
 					"$(inherited)",
 					"/Users/dongjoonkim/Downloads/parse-library-1.4.1",
 					"/Users/seungwon/Downloads/parse-library-1.4.1",
-                    "/Users/jenniferjo/Downloads/parse-library-1.4.1",
+					"/Users/jenniferjo/Downloads/parse-library-1.4.1",
 					"$(USER_LIBRARY_DIR)/Frameworks",
 				);
 				INFOPLIST_FILE = Petsies/Info.plist;

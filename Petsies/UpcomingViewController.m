@@ -6,13 +6,13 @@
 //  Copyright (c) 2014년 BruinCS. All rights reserved.
 //
 
-#import "SecondViewController.h"
+#import "UpcomingViewController.h"
 
-@interface SecondViewController ()
+@interface UpcomingViewController ()
 
 @end
 
-@implementation SecondViewController
+@implementation UpcomingViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
