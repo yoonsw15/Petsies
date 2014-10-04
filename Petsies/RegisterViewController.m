@@ -8,6 +8,7 @@
 
 #import <Parse/Parse.h>
 #import "RegisterViewController.h"
+#import "ProfileViewController.h"
 
 @interface RegisterViewController ()
 
@@ -60,9 +61,11 @@ UIGestureRecognizer *tapper;
     [ud setObject:self.zipCode.text forKey:@"zipCode"];
     [ud synchronize];
     
-    user.username = self.name.text;
+    // use email address as username
+    user.username = self.email.text;
     user.password = self.password.text;
     user.email = self.email.text;
+    [user setObject:self.name.text forKey:@"name"];
     [user setObject:self.creditCard.text forKey:@"creditCard"];
     [user setObject:self.cvv.text forKey:@"CVV"];
     [user setObject:self.zipCode.text forKey:@"zipcode"];
@@ -75,5 +78,12 @@ UIGestureRecognizer *tapper;
             [errorAlertView show];
         }
     }];
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if([segue.identifier isEqualToString:@"SignupSuccessful"]){
+        ProfileViewController *detVC = segue.destinationViewController;
+    }
 }
 @end

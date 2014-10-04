@@ -6,6 +6,7 @@
 //  Copyright (c) 2014 BruinCS. All rights reserved.
 //
 
+#import <Parse/Parse.h>
 #import "LoginViewController.h"
 
 UIGestureRecognizer *tapper;
@@ -30,6 +31,18 @@ UIGestureRecognizer *tapper;
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+- (IBAction)loginButtonPressed:(id)sender {
+    [PFUser logInWithUsernameInBackground:self.emailTextField.text password:self.passwordTextField.text block:^(PFUser *user, NSError *error) {
+        if(user) {
+            [self performSegueWithIdentifier:@"LoginSuccessful" sender:self];
+        }else{
+            NSString *errorString = [[error userInfo] objectForKey:@"error"];
+            UIAlertView *errorAlertView = [[UIAlertView alloc] initWithTitle:@"Error" message:errorString delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil, nil];
+            [errorAlertView show];
+        }
+     
+    }];
 }
 
 
