@@ -9,7 +9,10 @@
 #import <Parse/Parse.h>
 #import "RegisterViewController.h"
 
-@interface RegisterViewController ()
+@interface RegisterViewController () <UITextFieldDelegate>
+
+@property (nonatomic, strong) UITextField *activeField;
+@property (nonatomic, strong) NSNotificationCenter *notif;
 
 @end
 
@@ -29,13 +32,81 @@ UIGestureRecognizer *tapper;
     tapper = [[UITapGestureRecognizer alloc]
               initWithTarget:self action:@selector(handleSingleTap:)];
     tapper.cancelsTouchesInView = NO;
+    
+    self.cvv.delegate = self;
+    self.zipCode.delegate = self;
+    
     [self.view addGestureRecognizer:tapper];
+    [self registerForKeyboardNotifications];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+// Call this method somewhere in your view controller setup code.
+- (void)registerForKeyboardNotifications
+{
+    self.notif = [NSNotificationCenter defaultCenter];
+    
+    [self.notif addObserver:self
+                   selector:@selector(keyboardWasShown:)
+                       name:UIKeyboardDidShowNotification object:nil];
+    
+    [self.notif  addObserver:self
+                    selector:@selector(keyboardWillBeHidden:)
+                        name:UIKeyboardWillHideNotification object:nil];
+    
+}
+
+// Called when the UIKeyboardDidShowNotification is sent.
+- (void)keyboardWasShown:(NSNotification*)aNotification
+{
+    NSDictionary* info = [aNotification userInfo];
+    CGSize kbSize = [[info objectForKey:UIKeyboardFrameBeginUserInfoKey] CGRectValue].size;
+    
+    UIEdgeInsets contentInsets = UIEdgeInsetsMake(0.0, 0.0, kbSize.height, 0.0);
+    self.scrollView.contentInset = contentInsets;
+    self.scrollView.scrollIndicatorInsets = contentInsets;
+    
+    // If active text field is hidden by keyboard, scroll it so it's visible
+    // Your app might not need or want this behavior.
+    CGRect aRect = self.view.frame;
+    aRect.size.height -= kbSize.height;
+    if (!CGRectContainsPoint(aRect, self.activeField.frame.origin) ) {
+        [self.scrollView setContentOffset:CGPointMake(0, kbSize.height/2) animated:YES];
+    }
+    
+    if ([self.activeField isEqual:self.cvv]) {
+        [self.scrollView setContentOffset:CGPointMake(0, kbSize.height/2) animated:YES];
+    }
+}
+
+// Called when the UIKeyboardWillHideNotification is sent
+- (void)keyboardWillBeHidden:(NSNotification*)aNotification
+{
+    UIEdgeInsets contentInsets = UIEdgeInsetsZero;
+    self.scrollView.contentInset = contentInsets;
+    self.scrollView.scrollIndicatorInsets = contentInsets;
+}
+
+- (void)textFieldDidBeginEditing:(UITextField *)textField
+{
+    self.activeField = textField;
+}
+
+- (void)textFieldDidEndEditing:(UITextField *)textField
+{
+    self.activeField = nil;
+}
+
+
+- (void)dealloc
+{
+    self.notif = nil;
+}
+
 
 /*
 #pragma mark - Navigation

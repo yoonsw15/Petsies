@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="14A379a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="49e-Tb-3d3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="w0u-X9-7WO">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
     </dependencies>
@@ -205,7 +205,7 @@
                         <viewControllerLayoutGuide type="top" id="oMb-Jm-1yU"/>
                         <viewControllerLayoutGuide type="bottom" id="1T6-QP-CaN"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="Y0K-Is-2zu">
+                    <view key="view" contentMode="scaleToFill" id="Y0K-Is-2zu" customClass="UIScrollView">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -315,6 +315,7 @@
                         <outlet property="email" destination="JrK-C1-JEe" id="nR0-8a-Flj"/>
                         <outlet property="name" destination="5yj-Le-550" id="kb6-Sy-ofb"/>
                         <outlet property="password" destination="Gs9-cP-YqT" id="Dnh-gR-vtu"/>
+                        <outlet property="scrollView" destination="Y0K-Is-2zu" id="eUq-d2-PaC"/>
                         <outlet property="zipCode" destination="9uV-LX-gaa" id="W7n-tS-WyF"/>
                     </connections>
                 </viewController>
@@ -330,7 +331,7 @@
                         <viewControllerLayoutGuide type="top" id="721-kL-nJs"/>
                         <viewControllerLayoutGuide type="bottom" id="tDE-gS-qUZ"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="ycT-yn-RRz">
+                    <view key="view" contentMode="scaleToFill" id="ycT-yn-RRz" customClass="UIScrollView">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -359,7 +360,7 @@
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="49Y-ey-1O3">
                                 <rect key="frame" x="65" y="439" width="191" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m5U-O0-qW3">
                                 <rect key="frame" x="135" y="483" width="51" height="30"/>
@@ -376,6 +377,11 @@
                         <color key="backgroundColor" red="0.058446823500000002" green="0.69681369729999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="email" destination="1gT-gF-iN1" id="F6D-Mh-mt9"/>
+                        <outlet property="password" destination="49Y-ey-1O3" id="wOl-5w-m8h"/>
+                        <outlet property="scrollView" destination="ycT-yn-RRz" id="O1F-g8-RNW"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0EJ-oP-WvR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -503,7 +509,7 @@
         <image name="walk" width="150" height="150"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="331-gH-oHJ"/>
+        <segue reference="DkU-ta-bZg"/>
         <segue reference="04j-bc-0KS"/>
     </inferredMetricsTieBreakers>
 </document>
