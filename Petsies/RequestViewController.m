@@ -6,13 +6,13 @@
 //  Copyright (c) 2014년 BruinCS. All rights reserved.
 //
 
-#import "FirstViewController.h"
+#import "RequestViewController.h"
 
-@interface FirstViewController ()
+@interface RequestViewController ()
 
 @end
 
-@implementation FirstViewController
+@implementation RequestViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];

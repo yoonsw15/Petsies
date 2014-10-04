@@ -1,5 +1,5 @@
 //
-//  FirstViewController.h
+//  RequestViewController.h
 //  Petsies
 //
 //  Created by SeungWon on 2014. 10. 3..
@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface FirstViewController : UIViewController
+@interface RequestViewController : UIViewController
 
 
 @end
