@@ -448,6 +448,7 @@
 					"$(inherited)",
 					"/Users/dongjoonkim/Downloads/parse-library-1.4.1",
 					"/Users/seungwon/Downloads/parse-library-1.4.1",
+                    "/Users/jenniferjo/Downloads/parse-library-1.4.1",
 					"$(USER_LIBRARY_DIR)/Frameworks",
 				);
 				INFOPLIST_FILE = Petsies/Info.plist;
@@ -464,6 +465,7 @@
 					"$(inherited)",
 					"/Users/dongjoonkim/Downloads/parse-library-1.4.1",
 					"/Users/seungwon/Downloads/parse-library-1.4.1",
+                    "/Users/jenniferjo/Downloads/parse-library-1.4.1",
 					"$(USER_LIBRARY_DIR)/Frameworks",
 				);
 				INFOPLIST_FILE = Petsies/Info.plist;
