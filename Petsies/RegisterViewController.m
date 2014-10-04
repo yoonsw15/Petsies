@@ -6,6 +6,7 @@
 //  Copyright (c) 2014년 BruinCS. All rights reserved.
 //
 
+#import <Parse/Parse.h>
 #import "RegisterViewController.h"
 
 @interface RegisterViewController ()
@@ -49,6 +50,7 @@ UIGestureRecognizer *tapper;
 
 - (IBAction)nextButton:(id)sender {
     NSUserDefaults *ud = [NSUserDefaults standardUserDefaults];
+    PFUser *user = [PFUser user];
     
     [ud setObject:self.email.text forKey:@"email"];
     [ud setObject:self.password.text forKey:@"password"];
@@ -56,7 +58,22 @@ UIGestureRecognizer *tapper;
     [ud setObject:self.creditCard.text forKey:@"creditCard"];
     [ud setObject:self.cvv.text forKey:@"cvv"];
     [ud setObject:self.zipCode.text forKey:@"zipCode"];
-
     [ud synchronize];
+    
+    user.username = self.name.text;
+    user.password = self.password.text;
+    user.email = self.email.text;
+    [user setObject:self.creditCard.text forKey:@"creditCard"];
+    [user setObject:self.cvv.text forKey:@"CVV"];
+    [user setObject:self.zipCode.text forKey:@"zipcode"];
+    [user signUpInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+        if(!error){
+            [self performSegueWithIdentifier:@"SignupSuccessful" sender:self];
+        }else{
+            NSString *errorString = [[error userInfo] objectForKey:@"error"];
+            UIAlertView *errorAlertView = [[UIAlertView alloc] initWithTitle:@"Error" message:errorString delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil, nil];
+            [errorAlertView show];
+        }
+    }];
 }
 @end
