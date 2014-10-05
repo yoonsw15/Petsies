@@ -466,12 +466,12 @@
                                         </connections>
                                     </button>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="49Y-ey-1O3">
-                                        <rect key="frame" x="65" y="470" width="191" height="30"/>
+                                        <rect key="frame" x="65" y="463" width="191" height="30"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m5U-O0-qW3">
-                                        <rect key="frame" x="135" y="515" width="51" height="30"/>
+                                        <rect key="frame" x="135" y="502" width="51" height="30"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <state key="normal" title="Login">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -584,15 +584,13 @@
                                     <outlet property="delegate" destination="z4c-MQ-sX5" id="UGE-0o-WnS"/>
                                 </connections>
                             </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e9y-LN-yjS">
-                                <rect key="frame" x="249" y="176" width="47" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                <state key="normal" title="add">
-                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qNP-ak-2Sm">
+                                <rect key="frame" x="266" y="140" width="30" height="63"/>
+                                <state key="normal" image="inv_puppy">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="addAPet:" destination="z4c-MQ-sX5" eventType="touchUpInside" id="Ywx-tU-Pjc"/>
+                                    <action selector="addAPet:" destination="z4c-MQ-sX5" eventType="touchUpInside" id="4Ty-Nd-Lbu"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -634,12 +632,13 @@
     <resources>
         <image name="back" width="512" height="512"/>
         <image name="first" width="30" height="30"/>
+        <image name="inv_puppy" width="414" height="886"/>
         <image name="menu" width="512" height="512"/>
         <image name="second" width="30" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="DkU-ta-bZg"/>
-        <segue reference="04j-bc-0KS"/>
+        <segue reference="331-gH-oHJ"/>
         <segue reference="hSh-RW-9YX"/>
+        <segue reference="04j-bc-0KS"/>
     </inferredMetricsTieBreakers>
 </document>
