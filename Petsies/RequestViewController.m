@@ -38,28 +38,12 @@
 - (IBAction)menuTapped:(id)sender
 {
     NSArray *images = @[
-                        [UIImage imageNamed:@"gear"],
-                        [UIImage imageNamed:@"globe"],
                         [UIImage imageNamed:@"profile"],
-                        [UIImage imageNamed:@"star"],
+                        [UIImage imageNamed:@"walk"],
                         [UIImage imageNamed:@"gear"],
-                        [UIImage imageNamed:@"globe"],
-                        [UIImage imageNamed:@"profile"],
-                        [UIImage imageNamed:@"star"],
-                        [UIImage imageNamed:@"gear"],
-                        [UIImage imageNamed:@"globe"],
-                        [UIImage imageNamed:@"profile"],
-                        [UIImage imageNamed:@"star"],
+                        [UIImage imageNamed:@"signout"],
                         ];
     NSArray *colors = @[
-                        [UIColor colorWithRed:240/255.f green:159/255.f blue:254/255.f alpha:1],
-                        [UIColor colorWithRed:255/255.f green:137/255.f blue:167/255.f alpha:1],
-                        [UIColor colorWithRed:126/255.f green:242/255.f blue:195/255.f alpha:1],
-                        [UIColor colorWithRed:119/255.f green:152/255.f blue:255/255.f alpha:1],
-                        [UIColor colorWithRed:240/255.f green:159/255.f blue:254/255.f alpha:1],
-                        [UIColor colorWithRed:255/255.f green:137/255.f blue:167/255.f alpha:1],
-                        [UIColor colorWithRed:126/255.f green:242/255.f blue:195/255.f alpha:1],
-                        [UIColor colorWithRed:119/255.f green:152/255.f blue:255/255.f alpha:1],
                         [UIColor colorWithRed:240/255.f green:159/255.f blue:254/255.f alpha:1],
                         [UIColor colorWithRed:255/255.f green:137/255.f blue:167/255.f alpha:1],
                         [UIColor colorWithRed:126/255.f green:242/255.f blue:195/255.f alpha:1],
@@ -77,9 +61,12 @@
 
 - (void)sidebar:(RNFrostedSidebar *)sidebar didTapItemAtIndex:(NSUInteger)index {
     NSLog(@"Tapped item at index %i",index);
-    if (index == 3) {
-        [sidebar dismissAnimated:YES completion:nil];
+    
+    if (index == 1) {
+        [self performSegueWithIdentifier:@"showWalk" sender:self];
     }
+    
+
 }
 
 - (void)sidebar:(RNFrostedSidebar *)sidebar didEnable:(BOOL)itemEnabled itemAtIndex:(NSUInteger)index {
