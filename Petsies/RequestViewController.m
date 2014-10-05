@@ -31,8 +31,11 @@
     
     NSDate *startDate = self.startPicker.date;
     NSDate *endDate = self.endPicker.date;
-    
-    
+}
+
+- (IBAction)menuTapped:(id)sender
+{
+    NSLog(@"Menu Tapped");
 }
 
 @end
