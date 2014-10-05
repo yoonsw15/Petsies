@@ -1,18 +1,18 @@
 //
-//  SitterViewController.m
+//  FreeTimeViewController.m
 //  Petsies
 //
 //  Created by SeungWon on 2014. 10. 4..
 //  Copyright (c) 2014년 BruinCS. All rights reserved.
 //
 
-#import "SitterViewController.h"
+#import "FreeTimeViewController.h"
 
-@interface SitterViewController ()
+@interface FreeTimeViewController ()
 
 @end
 
-@implementation SitterViewController
+@implementation FreeTimeViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -23,25 +23,26 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-- (IBAction)dismissViewController:(id)sender {
+- (IBAction)backButtonTapped:(id)sender
+{
+    if ([self.delegate respondsToSelector:@selector(backButtonTappedWithStartDate:AndEndDate:)]) {
+        [self.delegate backButtonTappedWithStartDate:self.startPicker.date AndEndDate:self.endPicker.date];
+        
+        [self dismissViewControllerAnimated:YES completion:nil];
+    }
+}
+- (IBAction)dismissVC:(id)sender {
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
-- (void)backButtonTappedWithStartDate:(NSDate *)start AndEndDate:(NSDate *)end
-{
-    NSLog(@"The date has been picked as start %@, end %@", start, end);
-}
-
+/*
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
-    
-    FreeTimeViewController *destination = (FreeTimeViewController *)[segue destinationViewController];
-    destination.delegate = self;
 }
-
+*/
 
 @end
