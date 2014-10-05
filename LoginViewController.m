@@ -8,7 +8,7 @@
 
 #import <Parse/Parse.h>
 #import "LoginViewController.h"
-
+#import "RequestViewController.h"
 
 @interface LoginViewController () <UITextFieldDelegate>
 
@@ -44,7 +44,7 @@
     // Dispose of any resources that can be recreated.
 }
 - (IBAction)loginButtonPressed:(id)sender {
-    [PFUser logInWithUsernameInBackground:self.emailTextField.text password:self.passwordTextField.text block:^(PFUser *user, NSError *error) {
+    [PFUser logInWithUsernameInBackground:self.email.text password:self.password.text block:^(PFUser *user, NSError *error) {
         if(user) {
             [self performSegueWithIdentifier:@"LoginSuccessful" sender:self];
         }else{
@@ -52,10 +52,15 @@
             UIAlertView *errorAlertView = [[UIAlertView alloc] initWithTitle:@"Error" message:errorString delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil, nil];
             [errorAlertView show];
         }
-     
     }];
 }
 
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if([segue.identifier isEqualToString:@"LoginSuccessful"]){
+        RequestViewController *detVC = segue.destinationViewController;
+    }
+}
 
 // Call this method somewhere in your view controller setup code.
 - (void)registerForKeyboardNotifications
