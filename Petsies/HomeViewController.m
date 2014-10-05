@@ -41,10 +41,9 @@
     self.counter = self.counter + 1;
     
     if (self.counter > 4) {
-        self.counter = 0;
-        [self.animationTimer invalidate];
-        return;
+        self.counter = self.counter % 4;
     }
+    
     [UIView animateWithDuration:0.1
                      animations:^{
                          NSLog(@"%i", self.counter);
