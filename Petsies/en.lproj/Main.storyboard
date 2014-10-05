@@ -587,8 +587,8 @@
         <image name="walk" width="150" height="150"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="331-gH-oHJ"/>
-        <segue reference="04j-bc-0KS"/>
         <segue reference="vs9-b3-Cuj"/>
+        <segue reference="04j-bc-0KS"/>
+        <segue reference="DkU-ta-bZg"/>
     </inferredMetricsTieBreakers>
 </document>
