@@ -55,6 +55,10 @@
     if (index == 1) {
         [self performSegueWithIdentifier:@"showWalk" sender:self];
     }
+    
+    else if (index == 3) {
+        [self performSegueWithIdentifier:@"backToHome" sender:self];
+    }
 }
 
 - (void)sidebar:(RNFrostedSidebar *)sidebar didEnable:(BOOL)itemEnabled itemAtIndex:(NSUInteger)index {

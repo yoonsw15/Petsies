@@ -93,6 +93,9 @@
         [self performSegueWithIdentifier:@"showWalk" sender:self];
     }
     
+    else if (index == 3) {
+        [self performSegueWithIdentifier:@"backToHome" sender:self];
+    }
 
 }
 
