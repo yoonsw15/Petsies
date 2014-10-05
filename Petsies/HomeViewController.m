@@ -56,6 +56,20 @@
                      }];
 }
 
+- (IBAction)nyanClicked:(id)sender {
+    UIImageView* nyanView = [[UIImageView alloc] initWithFrame:self.background.bounds];
+    nyanView.animationImages = [NSArray arrayWithObjects:
+                                         [UIImage imageNamed:@"nyan1"],
+                                         [UIImage imageNamed:@"nyan2"],
+                                         [UIImage imageNamed:@"nyan3"],
+                                         [UIImage imageNamed:@"nyan4"],[UIImage imageNamed:@"nyan5"], [UIImage imageNamed:@"nyan6"],[UIImage imageNamed:@"nyan7"],[UIImage imageNamed:@"nyan8"],[UIImage imageNamed:@"nyan9"],[UIImage imageNamed:@"nyan10"],[UIImage imageNamed:@"nyan11"],[UIImage imageNamed:@"nyan12"],nil];
+    nyanView.animationDuration = 0.2f;
+    nyanView.animationRepeatCount = 0;
+    [nyanView startAnimating];
+    [self.background addSubview: nyanView];
+    
+}
+
 
 /*
 #pragma mark - Navigation
