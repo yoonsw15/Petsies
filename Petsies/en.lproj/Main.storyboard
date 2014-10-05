@@ -293,6 +293,15 @@
                                     <segue destination="daU-L5-drG" kind="presentation" modalTransitionStyle="crossDissolve" id="DkU-ta-bZg"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VEn-hl-APY">
+                                <rect key="frame" x="16" y="119" width="100" height="100"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="nyanClicked:" destination="w0u-X9-7WO" eventType="touchUpInside" id="zxs-fR-zHg"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.63276997450000005" green="0.93679589230000004" blue="0.99431699510000005" alpha="0.93999999999999995" colorSpace="calibratedRGB"/>
                     </view>
