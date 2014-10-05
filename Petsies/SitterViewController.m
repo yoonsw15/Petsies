@@ -6,6 +6,7 @@
 //  Copyright (c) 2014년 BruinCS. All rights reserved.
 //
 
+#import <Parse/Parse.h>
 #import "SitterViewController.h"
 
 @interface SitterViewController ()
@@ -43,7 +44,11 @@
     
     [self.freeTimeData addObject:freeTime];
     [self.freeTimeList reloadData];
-    
+    PFObject *newSchedule = [PFObject objectWithClassName:@"SitterSchedule"];
+    [newSchedule setObject:start forKey:@"startDate"];
+    [newSchedule setObject:end forKey:@"endDate"];
+    [newSchedule setObject:PFUser.currentUser forKey:@"userName"];
+    [newSchedule saveInBackground];
 //    NSLog(@"The date has been picked as start %@, end %@", [formatDate stringFromDate:start], [formatDate stringFromDate:end]);
 }
 

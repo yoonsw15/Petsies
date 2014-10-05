@@ -51,6 +51,9 @@
             
             [vc setModalTransitionStyle:UIModalTransitionStyleFlipHorizontal];
             [self presentViewController:vc animated:YES completion:nil];
+            NSUserDefaults *ud = [NSUserDefaults standardUserDefaults];
+            [ud setObject:self.email.text forKey:@"email"];
+            [ud setObject:self.password.text forKey:@"password"];
         }else{
             NSString *errorString = [[error userInfo] objectForKey:@"error"];
             UIAlertView *errorAlertView = [[UIAlertView alloc] initWithTitle:@"Error" message:errorString delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil, nil];
