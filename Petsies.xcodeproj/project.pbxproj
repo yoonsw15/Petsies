@@ -19,6 +19,7 @@
 		A908BD0D19E08BF600FCAA92 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A908BD0319E08BF600FCAA92 /* SystemConfiguration.framework */; };
 		A996A8F419E13D1D004ECD41 /* QueryResultViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A996A8F319E13D1D004ECD41 /* QueryResultViewController.m */; };
 		A996A8F719E14814004ECD41 /* FinalRequestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A996A8F619E14814004ECD41 /* FinalRequestViewController.m */; };
+		A996A8FA19E14EB3004ECD41 /* RNFrostedSidebar.m in Sources */ = {isa = PBXBuildFile; fileRef = A996A8F919E14EB3004ECD41 /* RNFrostedSidebar.m */; };
 		E374C0D519E0C52700C5D5E5 /* FreeTimeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E374C0D419E0C52700C5D5E5 /* FreeTimeViewController.m */; };
 		E3B928BF19E09BC400A304F0 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3B928BD19E09BC400A304F0 /* Bolts.framework */; };
 		E3B928C019E09BC400A304F0 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3B928BE19E09BC400A304F0 /* Parse.framework */; };
@@ -63,6 +64,8 @@
 		A996A8F319E13D1D004ECD41 /* QueryResultViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QueryResultViewController.m; sourceTree = "<group>"; };
 		A996A8F519E14814004ECD41 /* FinalRequestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FinalRequestViewController.h; sourceTree = "<group>"; };
 		A996A8F619E14814004ECD41 /* FinalRequestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FinalRequestViewController.m; sourceTree = "<group>"; };
+		A996A8F819E14EB3004ECD41 /* RNFrostedSidebar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RNFrostedSidebar.h; sourceTree = "<group>"; };
+		A996A8F919E14EB3004ECD41 /* RNFrostedSidebar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RNFrostedSidebar.m; sourceTree = "<group>"; };
 		E374C0D319E0C52700C5D5E5 /* FreeTimeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FreeTimeViewController.h; sourceTree = "<group>"; };
 		E374C0D419E0C52700C5D5E5 /* FreeTimeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FreeTimeViewController.m; sourceTree = "<group>"; };
 		E3B928BD19E09BC400A304F0 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Bolts.framework; path = ../../Library/Frameworks/Bolts.framework; sourceTree = "<group>"; };
@@ -130,8 +133,8 @@
 		E318D05B19E118AE00371E45 /* SideBarLibrary */ = {
 			isa = PBXGroup;
 			children = (
-				E318D05C19E118BB00371E45 /* RNFrostedSidebar.h */,
-				E318D05D19E118BB00371E45 /* RNFrostedSidebar.m */,
+				A996A8F819E14EB3004ECD41 /* RNFrostedSidebar.h */,
+				A996A8F919E14EB3004ECD41 /* RNFrostedSidebar.m */,
 			);
 			name = SideBarLibrary;
 			sourceTree = "<group>";
@@ -344,7 +347,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E318D05E19E118BB00371E45 /* RNFrostedSidebar.m in Sources */,
 				F06BBF0719E08F110035647A /* LoginViewController.m in Sources */,
 				E3FD114D19DFA99A00B022E3 /* UpcomingViewController.m in Sources */,
 				E3FD114719DFA99A00B022E3 /* AppDelegate.m in Sources */,
@@ -352,6 +354,7 @@
 				A996A8F419E13D1D004ECD41 /* QueryResultViewController.m in Sources */,
 				A996A8F719E14814004ECD41 /* FinalRequestViewController.m in Sources */,
 				E3FD117D19DFC7A100B022E3 /* ProfileViewController.m in Sources */,
+				A996A8FA19E14EB3004ECD41 /* RNFrostedSidebar.m in Sources */,
 				E3B928C319E0A94000A304F0 /* SitterViewController.m in Sources */,
 				E3FD114A19DFA99A00B022E3 /* RequestViewController.m in Sources */,
 				E3FD117719DFC2DC00B022E3 /* RegisterViewController.m in Sources */,
