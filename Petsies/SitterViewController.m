@@ -43,7 +43,8 @@
     
     [self.freeTimeData addObject:freeTime];
     [self.freeTimeList reloadData];
-    NSLog(@"The date has been picked as start %@, end %@", start, end);
+    
+//    NSLog(@"The date has been picked as start %@, end %@", [formatDate stringFromDate:start], [formatDate stringFromDate:end]);
 }
 
 #pragma mark - Navigation
