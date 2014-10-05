@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "RNFrostedSidebar.h"
 
-@interface RequestViewController : UIViewController
+@interface RequestViewController : UIViewController <RNFrostedSidebarDelegate>
 @property (strong, nonatomic) IBOutlet UIDatePicker *startPicker;
 @property (strong, nonatomic) IBOutlet UIDatePicker *endPicker;
 
