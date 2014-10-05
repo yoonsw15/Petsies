@@ -253,7 +253,7 @@
                         <viewControllerLayoutGuide type="top" id="Ffe-Qs-Bii"/>
                         <viewControllerLayoutGuide type="bottom" id="ZH8-35-xWA"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="tqd-5g-Fop">
+                    <view key="view" contentMode="scaleToFill" id="tqd-5g-Fop" customClass="UIImageView">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -277,17 +277,14 @@
                                     <segue destination="daU-L5-drG" kind="presentation" modalTransitionStyle="crossDissolve" id="DkU-ta-bZg"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Petsies" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mYq-To-PiD">
-                                <rect key="frame" x="105" y="155" width="109" height="35"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="27"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
-                        <color key="backgroundColor" red="0.058446823500000002" green="0.69681369729999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="R3O-sd-PMc"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="background" destination="tqd-5g-Fop" id="Myk-yB-dYP"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xVO-iw-LxF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -607,6 +604,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="04j-bc-0KS"/>
-        <segue reference="331-gH-oHJ"/>
+        <segue reference="DkU-ta-bZg"/>
     </inferredMetricsTieBreakers>
 </document>
