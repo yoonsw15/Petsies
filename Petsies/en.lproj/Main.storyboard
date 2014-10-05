@@ -4,7 +4,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
     </dependencies>
     <scenes>
-        <!--Request View Controller-->
+        <!--find a sitter-->
         <scene sceneID="hNz-n2-bh7">
             <objects>
                 <viewController id="9pv-A4-QxB" customClass="RequestViewController" sceneMemberID="viewController">
@@ -16,15 +16,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FMC-sA-LXy">
-                                <rect key="frame" x="15" y="28" width="26" height="26"/>
-                                <state key="normal" image="menu">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="menuTapped:" destination="9pv-A4-QxB" eventType="touchUpInside" id="ecT-Wa-dr6"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="start" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hBI-hI-fEI">
                                 <rect key="frame" x="16" y="82" width="37" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -50,12 +41,6 @@
                                     <!--2014-10-04 21:42:15 +0000-->
                                 </date>
                             </datePicker>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="find a sitter" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1FW-lX-3kH">
-                                <rect key="frame" x="55" y="50" width="211" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="48X-Mf-RSX">
                                 <rect key="frame" x="90" y="468" width="141" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
@@ -70,18 +55,32 @@
                         </subviews>
                         <color key="backgroundColor" red="0.63276997450000005" green="0.93679589230000004" blue="0.99431699510000005" alpha="0.93999999999999995" colorSpace="calibratedRGB"/>
                     </view>
-                    <navigationItem key="navigationItem" id="NMr-EO-nyR"/>
+                    <navigationItem key="navigationItem" title="find a sitter" id="Kyn-uY-ghT">
+                        <barButtonItem key="leftBarButtonItem" style="plain" id="pYA-U7-rSD">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="FMC-sA-LXy">
+                                <rect key="frame" x="15" y="48" width="26" height="26"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="menu">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="menuTapped:" destination="9pv-A4-QxB" eventType="touchUpInside" id="ecT-Wa-dr6"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
                         <outlet property="endPicker" destination="mkV-BW-o09" id="N0T-s6-5zL"/>
                         <outlet property="startPicker" destination="hlP-y7-4d9" id="cEX-Vg-kBq"/>
                         <segue destination="zjV-QH-8fM" kind="presentation" identifier="showWalk" id="hSh-RW-9YX"/>
+                        <segue destination="DxV-VD-O7B" kind="presentation" identifier="backToHome" modalTransitionStyle="flipHorizontal" id="arn-sd-S6V"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1306" y="-181"/>
+            <point key="canvasLocation" x="523" y="227"/>
         </scene>
         <!--Query Result View Controller-->
         <scene sceneID="usP-AB-dqJ">
@@ -122,7 +121,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3qX-ZA-u0J" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1711" y="-203"/>
+            <point key="canvasLocation" x="1327" y="-167"/>
         </scene>
         <!--Final Request View Controller-->
         <scene sceneID="QZh-E0-EyV">
@@ -153,7 +152,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kLo-c1-6kT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2029" y="-271"/>
+            <point key="canvasLocation" x="953" y="-317"/>
         </scene>
         <!--Free Time View Controller-->
         <scene sceneID="u84-8I-dil">
@@ -226,7 +225,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="s8o-Tg-2JW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2120" y="225"/>
+            <point key="canvasLocation" x="1372" y="485"/>
         </scene>
         <!--upcoming-->
         <scene sceneID="wg7-f3-ORb">
@@ -277,11 +276,12 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
                         <segue destination="zjV-QH-8fM" kind="presentation" identifier="showWalk" id="6aa-Te-S6C"/>
+                        <segue destination="w0u-X9-7WO" kind="presentation" identifier="backToHome" modalTransitionStyle="flipHorizontal" id="EHo-Il-AMP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="513" y="740"/>
+            <point key="canvasLocation" x="552" y="952"/>
         </scene>
         <!--Sitter View Controller-->
         <scene sceneID="FER-Bt-Crd">
@@ -603,7 +603,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="-349" y="456"/>
+            <point key="canvasLocation" x="-501" y="528"/>
         </scene>
         <!--Profile View Controller-->
         <scene sceneID="4El-jw-pMD">
@@ -738,7 +738,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nsP-hT-KYb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="494" y="-181"/>
+            <point key="canvasLocation" x="499" y="-433"/>
         </scene>
     </scenes>
     <resources>
@@ -749,9 +749,10 @@
         <image name="second" width="30" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="hSh-RW-9YX"/>
         <segue reference="DkU-ta-bZg"/>
-        <segue reference="GMf-ey-czM"/>
-        <segue reference="6aa-Te-S6C"/>
+        <segue reference="EHo-Il-AMP"/>
+        <segue reference="arn-sd-S6V"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
 </document>

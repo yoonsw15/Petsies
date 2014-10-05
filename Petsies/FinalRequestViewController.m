@@ -6,6 +6,7 @@
 //  Copyright (c) 2014 BruinCS. All rights reserved.
 //
 
+#import <Parse/Parse.h>
 #import "FinalRequestViewController.h"
 
 @interface FinalRequestViewController ()
@@ -25,7 +26,20 @@
 }
 - (IBAction)finalRequest:(id)sender
 {
-    
+    NSUserDefaults *ud = [NSUserDefaults standardUserDefaults];
+    PFObject *newRequest = [PFObject objectWithClassName:@"Request"];
+//    [newRequest setObject:[ud objectForKey:@"latestStartTime"] forKey:@"startTime"];
+//    [newRequest setObject:[ud objectForKey:@"latestEndTime"] forKey:@"endTime"];
+    [newRequest setObject:PFUser.currentUser forKey:@"owner"];
+    PFQuery *query = [PFUser query];
+    [query whereKey:@"userName" equalTo:[ud objectForKey:@"latestSitter"]];
+    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+        PFUser *user = (PFUser *)[objects firstObject];
+        NSLog(@"%@", objects);
+//        PFUser *user2 = [PFQuery getUserObjectWithId:user.objectId];
+        [newRequest setObject:user forKey:@"sitter"];
+    }];
+    [newRequest saveInBackground];
 }
 
 /*

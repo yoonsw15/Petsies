@@ -74,12 +74,17 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    
     FinalRequestViewController *vc;
     vc = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"FinalRequest"];
-    
     [self.navigationController pushViewController:vc animated:YES];
+    
+    UITableViewCell *cell = [self.queryList cellForRowAtIndexPath:indexPath];
+    
+    NSUserDefaults *ud = [NSUserDefaults standardUserDefaults];
+    [ud setObject:cell.textLabel.text forKey:@"latestSitter"];
 }
-
+    
 /*
 #pragma mark - Navigation
 
