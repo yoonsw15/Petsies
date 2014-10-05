@@ -49,6 +49,11 @@
     self.addPhoto.titleLabel.text = @"";
     
     [picker dismissViewControllerAnimated:YES completion:nil];
+    
+    NSUserDefaults *ud = [NSUserDefaults standardUserDefaults];
+    [ud setObject:pickedImage forKey:@"profilePic"];
+    [ud synchronize];
+        
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
