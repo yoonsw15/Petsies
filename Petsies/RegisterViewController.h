@@ -17,6 +17,7 @@
 @property (strong, nonatomic) IBOutlet UITextField *cvv;
 @property (strong, nonatomic) IBOutlet UITextField *zipCode;
 
+@property (strong, nonatomic) IBOutlet UIScrollView *scrollView;
 
 
 
