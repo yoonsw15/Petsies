@@ -10,6 +10,9 @@
 
 @interface HomeViewController ()
 
+@property (nonatomic, strong) NSArray * allImages;
+@property (nonatomic, strong) NSTimer * animationTimer;
+@property (nonatomic, assign) NSInteger counter;
 @end
 
 @implementation HomeViewController
@@ -17,14 +20,37 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    
-    NSLog(@"I'm loaded");
+
+    self.counter = 0;
+    self.allImages = [[NSArray alloc]initWithObjects:@"1.png",@"2.png",@"3.png", @"4.png",nil];
+    self.animationTimer = [NSTimer scheduledTimerWithTimeInterval:1.0
+                                                                target:self
+                                                              selector:@selector(changeBackground)
+                                                              userInfo:nil
+                                                               repeats:YES];
+    [self changeBackground];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+- (void)changeBackground
+{
+    self.counter = self.counter + 1;
+    
+    if (self.counter > 4) {
+        self.counter = self.counter % 4;
+    }
+    
+    [UIView animateWithDuration:0.1
+                     animations:^{
+                         NSLog(@"%i", self.counter);
+                         self.background.image = [UIImage imageNamed:[NSString stringWithFormat: @"%i.jpg" , self.counter]];
+                     }];
+}
+
 
 /*
 #pragma mark - Navigation
