@@ -17,7 +17,8 @@
 		A908BD0B19E08BF600FCAA92 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A908BD0119E08BF600FCAA92 /* Security.framework */; };
 		A908BD0C19E08BF600FCAA92 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A908BD0219E08BF600FCAA92 /* StoreKit.framework */; };
 		A908BD0D19E08BF600FCAA92 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A908BD0319E08BF600FCAA92 /* SystemConfiguration.framework */; };
-		E318D05E19E118BB00371E45 /* RNFrostedSidebar.m in Sources */ = {isa = PBXBuildFile; fileRef = E318D05D19E118BB00371E45 /* RNFrostedSidebar.m */; };
+		A996A8F419E13D1D004ECD41 /* QueryResultViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A996A8F319E13D1D004ECD41 /* QueryResultViewController.m */; };
+		A996A8F719E14814004ECD41 /* FinalRequestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A996A8F619E14814004ECD41 /* FinalRequestViewController.m */; };
 		E374C0D519E0C52700C5D5E5 /* FreeTimeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E374C0D419E0C52700C5D5E5 /* FreeTimeViewController.m */; };
 		E3B928BF19E09BC400A304F0 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3B928BD19E09BC400A304F0 /* Bolts.framework */; };
 		E3B928C019E09BC400A304F0 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3B928BE19E09BC400A304F0 /* Parse.framework */; };
@@ -58,8 +59,10 @@
 		A908BD0119E08BF600FCAA92 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		A908BD0219E08BF600FCAA92 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		A908BD0319E08BF600FCAA92 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
-		E318D05C19E118BB00371E45 /* RNFrostedSidebar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RNFrostedSidebar.h; sourceTree = "<group>"; };
-		E318D05D19E118BB00371E45 /* RNFrostedSidebar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RNFrostedSidebar.m; sourceTree = "<group>"; };
+		A996A8F219E13D1D004ECD41 /* QueryResultViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QueryResultViewController.h; sourceTree = "<group>"; };
+		A996A8F319E13D1D004ECD41 /* QueryResultViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QueryResultViewController.m; sourceTree = "<group>"; };
+		A996A8F519E14814004ECD41 /* FinalRequestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FinalRequestViewController.h; sourceTree = "<group>"; };
+		A996A8F619E14814004ECD41 /* FinalRequestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FinalRequestViewController.m; sourceTree = "<group>"; };
 		E374C0D319E0C52700C5D5E5 /* FreeTimeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FreeTimeViewController.h; sourceTree = "<group>"; };
 		E374C0D419E0C52700C5D5E5 /* FreeTimeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FreeTimeViewController.m; sourceTree = "<group>"; };
 		E3B928BD19E09BC400A304F0 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Bolts.framework; path = ../../Library/Frameworks/Bolts.framework; sourceTree = "<group>"; };
@@ -162,6 +165,10 @@
 				E3FD117819DFC2E100B022E3 /* Onboarding */,
 				E3FD114819DFA99A00B022E3 /* RequestViewController.h */,
 				E3FD114919DFA99A00B022E3 /* RequestViewController.m */,
+				A996A8F219E13D1D004ECD41 /* QueryResultViewController.h */,
+				A996A8F319E13D1D004ECD41 /* QueryResultViewController.m */,
+				A996A8F519E14814004ECD41 /* FinalRequestViewController.h */,
+				A996A8F619E14814004ECD41 /* FinalRequestViewController.m */,
 				E3FD114B19DFA99A00B022E3 /* UpcomingViewController.h */,
 				E3FD114C19DFA99A00B022E3 /* UpcomingViewController.m */,
 				E3B928C119E0A94000A304F0 /* SitterViewController.h */,
@@ -342,6 +349,8 @@
 				E3FD114D19DFA99A00B022E3 /* UpcomingViewController.m in Sources */,
 				E3FD114719DFA99A00B022E3 /* AppDelegate.m in Sources */,
 				E374C0D519E0C52700C5D5E5 /* FreeTimeViewController.m in Sources */,
+				A996A8F419E13D1D004ECD41 /* QueryResultViewController.m in Sources */,
+				A996A8F719E14814004ECD41 /* FinalRequestViewController.m in Sources */,
 				E3FD117D19DFC7A100B022E3 /* ProfileViewController.m in Sources */,
 				E3B928C319E0A94000A304F0 /* SitterViewController.m in Sources */,
 				E3FD114A19DFA99A00B022E3 /* RequestViewController.m in Sources */,
