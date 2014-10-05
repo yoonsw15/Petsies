@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 #import "FreeTimeViewController.h"
 
-@interface SitterViewController : UIViewController <FreeTimeViewControllerDelegate>
+@interface SitterViewController : UIViewController <FreeTimeViewControllerDelegate,UITableViewDataSource, UITableViewDelegate>
+@property (strong, nonatomic) IBOutlet UITableView *freeTimeList;
 @end

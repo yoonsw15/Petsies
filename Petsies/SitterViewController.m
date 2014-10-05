@@ -10,6 +10,8 @@
 
 @interface SitterViewController ()
 
+@property NSMutableArray *freeTimeData;
+
 @end
 
 @implementation SitterViewController
@@ -17,6 +19,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    self.freeTimeList.delegate = self;
+    self.freeTimeData = [[NSMutableArray alloc] initWithCapacity:9];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -29,6 +33,16 @@
 
 - (void)backButtonTappedWithStartDate:(NSDate *)start AndEndDate:(NSDate *)end
 {
+    
+    NSDateFormatter *formatDate = [[NSDateFormatter alloc] init];
+    [formatDate setTimeStyle:NSDateFormatterMediumStyle];
+    [formatDate setDateFormat:@"EE hh:mm a"];
+    NSString *startDateString = [formatDate stringFromDate:start];
+    NSString *endDateString = [formatDate stringFromDate:end];
+    NSString *freeTime = [NSString stringWithFormat:@"%@ - %@",startDateString, endDateString];
+    
+    [self.freeTimeData addObject:freeTime];
+    [self.freeTimeList reloadData];
     NSLog(@"The date has been picked as start %@, end %@", start, end);
 }
 
@@ -41,6 +55,30 @@
     
     FreeTimeViewController *destination = (FreeTimeViewController *)[segue destinationViewController];
     destination.delegate = self;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    static NSString *simpleTableIdentifier = @"Cell";
+    
+    UITableViewCell *cell = [self.freeTimeList  dequeueReusableCellWithIdentifier:simpleTableIdentifier];
+    
+    if (cell == nil) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:simpleTableIdentifier];
+    }
+    
+    cell.textLabel.text = [self.freeTimeData objectAtIndex:indexPath.row];
+    return cell;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return [self.freeTimeData count];
+}
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+    return 1;
 }
 
 

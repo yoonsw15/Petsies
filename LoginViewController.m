@@ -46,7 +46,11 @@
 - (IBAction)loginButtonPressed:(id)sender {
     [PFUser logInWithUsernameInBackground:self.email.text password:self.password.text block:^(PFUser *user, NSError *error) {
         if(user) {
-            [self performSegueWithIdentifier:@"LoginSuccessful" sender:self];
+            UITabBarController *vc;
+            vc = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"TabBarVC"];
+            
+            [vc setModalTransitionStyle:UIModalTransitionStyleFlipHorizontal];
+            [self presentViewController:vc animated:YES completion:nil];
         }else{
             NSString *errorString = [[error userInfo] objectForKey:@"error"];
             UIAlertView *errorAlertView = [[UIAlertView alloc] initWithTitle:@"Error" message:errorString delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil, nil];
