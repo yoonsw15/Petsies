@@ -127,6 +127,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E318D05B19E118AE00371E45 /* SideBarLibrary */ = {
+			isa = PBXGroup;
+			children = (
+				E318D05C19E118BB00371E45 /* RNFrostedSidebar.h */,
+				E318D05D19E118BB00371E45 /* RNFrostedSidebar.m */,
+			);
+			name = SideBarLibrary;
+			sourceTree = "<group>";
+		};
 		E3FD113519DFA99A00B022E3 = {
 			isa = PBXGroup;
 			children = (
@@ -149,6 +158,7 @@
 		E3FD114019DFA99A00B022E3 /* Petsies */ = {
 			isa = PBXGroup;
 			children = (
+				E318D05B19E118AE00371E45 /* SideBarLibrary */,
 				E3FD114E19DFA99A00B022E3 /* Main.storyboard */,
 				E3FD114519DFA99A00B022E3 /* AppDelegate.h */,
 				E3FD114619DFA99A00B022E3 /* AppDelegate.m */,
@@ -334,6 +344,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E318D05E19E118BB00371E45 /* RNFrostedSidebar.m in Sources */,
 				F06BBF0719E08F110035647A /* LoginViewController.m in Sources */,
 				E3FD114D19DFA99A00B022E3 /* UpcomingViewController.m in Sources */,
 				E3FD114719DFA99A00B022E3 /* AppDelegate.m in Sources */,
