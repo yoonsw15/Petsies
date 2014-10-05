@@ -12,7 +12,6 @@
 
 @interface LoginViewController () <UITextFieldDelegate>
 
-@property (nonatomic, strong) UIGestureRecognizer *tapper;
 @property (nonatomic, strong) UITextField *activeField;
 @property (nonatomic, strong) NSNotificationCenter *notif;
 
@@ -20,19 +19,10 @@
 
 @implementation LoginViewController
 
-- (void)handleSingleTap:(UITapGestureRecognizer *) sender
-{
-    [self.view endEditing:YES];
-}
-
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    self.tapper = [[UITapGestureRecognizer alloc]
-              initWithTarget:self action:@selector(handleSingleTap:)];
-    self.tapper.cancelsTouchesInView = NO;
-    [self.view addGestureRecognizer:self.tapper];
     [self registerForKeyboardNotifications];
     
     self.email.delegate = self;
@@ -121,6 +111,10 @@
     self.activeField = nil;
 }
 
+- (IBAction)dismissKeyboard:(id)sender {
+    [self.email resignFirstResponder];
+    [self.password resignFirstResponder];
+}
 
 - (void)dealloc
 {
