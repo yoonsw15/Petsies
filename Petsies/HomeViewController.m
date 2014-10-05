@@ -36,6 +36,11 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (void)viewWillDisappear:(BOOL)animated
+{
+    [self.animationTimer invalidate];
+}
+
 - (void)changeBackground
 {
     self.counter = self.counter + 1;
@@ -46,8 +51,8 @@
     
     [UIView animateWithDuration:0.1
                      animations:^{
-                         NSLog(@"%i", self.counter);
-                         self.background.image = [UIImage imageNamed:[NSString stringWithFormat: @"%i.jpg" , self.counter]];
+                         NSLog(@"%li", (long)self.counter);
+                         self.background.image = [UIImage imageNamed:[NSString stringWithFormat: @"%li.jpg" , (long)self.counter]];
                      }];
 }
 
