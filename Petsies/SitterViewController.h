@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "FreeTimeViewController.h"
 
-@interface SitterViewController : UIViewController
-
+@interface SitterViewController : UIViewController <FreeTimeViewControllerDelegate>
 @end
