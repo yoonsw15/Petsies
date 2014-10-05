@@ -27,6 +27,8 @@
     
     self.email.delegate = self;
     self.password.delegate = self;
+    
+    self.background.image = [UIImage imageNamed:@"4.jpg"];
 }
 
 - (void)didReceiveMemoryWarning {
